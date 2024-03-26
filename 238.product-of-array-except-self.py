@@ -14,7 +14,7 @@ class Solution:
             product_list[i] = prefix
             prefix *= n
         postfix = 1
-        for i in range(-len(nums) - 1, -1, -1):
+        for i in range(-1, -len(nums) - 1, -1):
             product_list[i] *= postfix
             postfix *= nums[i]
         return product_list
