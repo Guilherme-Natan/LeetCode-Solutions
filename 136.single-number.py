@@ -7,7 +7,7 @@
 
 # @lc code=start
 class Solution:
-    def singleNumber(self, nums: List[int]) -> int:
+    def singleNumber(self, nums: list[int]) -> int:
         first_set = set(nums)
         final_set = set(nums)
         for n in nums:

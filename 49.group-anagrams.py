@@ -9,7 +9,7 @@ from collections import defaultdict
 
 
 class Solution:
-    def groupAnagrams(self, strs: List[str]) -> List[List[str]]:
+    def groupAnagrams(self, strs: list[str]) -> list[list[str]]:
         count_map = defaultdict(list)
         for string in strs:
             count_map[tuple(sorted(string))].append(string)
