@@ -22,12 +22,9 @@ class Solution:
             while rp > lp:
                 zero_sum = nums[lp] + nums[rp] + target
                 if zero_sum == 0:
-                    if not solutions or (nums[lp], nums[rp]) != (
-                        solutions[-1][0],
-                        solutions[-1][1],
-                    ):
-                        solutions.append([nums[lp], nums[rp], target])
-                    else:
+                    solutions.append([nums[lp], nums[rp], target])
+                    lp += 1
+                    while nums[lp] == nums[lp + -1] and lp < rp:
                         lp += 1
                     continue
                 if zero_sum > 0:
