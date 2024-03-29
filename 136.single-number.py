@@ -8,15 +8,10 @@
 # @lc code=start
 class Solution:
     def singleNumber(self, nums: list[int]) -> int:
-        first_set = set(nums)
-        final_set = set(nums)
+        out = 0
         for n in nums:
-            if n in first_set:
-                first_set.remove(n)
-            else:
-                final_set.remove(n)
-
-        return final_set.pop()
+            out ^= n
+        return out
 
 
 # @lc code=end
